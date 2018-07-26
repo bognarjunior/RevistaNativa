@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/bognar_junior/.android/build-cache/a2c3f74d7982b3eb985edbd0c6af12adc7c39e60/output/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/bognar_junior/Documents/GitHub/RevistaNativa/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_b949626e73c7fdc5dc4ebb1516fa66ddb634b227.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/bognar_junior/.android/build-cache/a2c3f74d7982b3eb985edbd0c6af12adc7c39e60/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="e7a850c25a7efbd533c496ab482c980fdafac58d">
+        <dex dex="/Users/bognar_junior/Documents/GitHub/RevistaNativa/android/app/build/intermediates/pre-dexed/debug/classes_41d7150900b8bcdc6042fdf3f3a157f803a584ec.jar" />
+    </item>
+
+</items>
