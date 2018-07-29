@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default class App extends Component {
   render() {
+    const mainText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies maximus sollicitudin. Integer egestas urna sit amet lorem imperdiet porta. Praesent eget condimentum arcu. Sed at elementum enim, quis facilisis metus.';
     return (
       <View style={styles.container}>
         <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -14,15 +15,25 @@ export default class App extends Component {
         <View style={styles.titleContainer}>
           <Text style={{ fontSize: 24 }}>Revista Nativa</Text>
         </View>
-        <View style={{ flex: 6, flexDirection: 'row', backgroundColor: '#f8ecc2' }}>
+        <View style={styles.mainContainer}>
           <View style={{ flex: 3 }}>
-            <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies maximus sollicitudin. Integer egestas urna sit amet lorem imperdiet porta. Praesent eget condimentum arcu. Sed at elementum enim, quis facilisis metus.</Text>
+            <Text style={{ fontSize: 14}} numberOfLines={9}>{mainText}</Text>
           </View>
-          <View style={{ flex: 2 }}>
-            <Image source={require('./image/wood.png')} />
-          </View>
+          <Image 
+            style={{ flex: 2, width: undefined, height: undefined }} 
+            source={require('./image/wood.png')} 
+          />
         </View>
-        <View style={{ flex: 7 }}>
+        <View style={{ 
+          flex: 7, 
+          flexDirection: 'row',
+          backgroundColor: '#f8ecc2',
+          borderBottomWidth: 6, 
+          borderTopWidth: 6 }}>
+          <View style={{flex: 1, borderRightWidth: 3}}>
+          </View>
+          <View style={{ flex: 1, borderLeftWidth: 3 }}>
+          </View>
           
         </View>
         <View style={{ flex: 1 }}>
@@ -45,5 +56,11 @@ const styles = StyleSheet.create({
     alignItems:'center', 
     justifyContent: 'center',
     borderBottomWidth: 6
+  },
+  mainContainer: { 
+    flex: 6, 
+    flexDirection: 'row', 
+    backgroundColor: '#f8ecc2', 
+    padding: 8 
   },
 });
