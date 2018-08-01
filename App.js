@@ -27,14 +27,9 @@ export default class App extends Component {
             source={require('./image/wood.png')} 
           />
         </View>
-        <View style={{ 
-          flex: 7, 
-          flexDirection: 'row',
-          backgroundColor: '#f8ecc2',
-          borderBottomWidth: 6, 
-          borderTopWidth: 6 }}>
+        <View style={styles.secondaryContainer}>
           <View style={{ flex: 1, borderRightWidth: 3 }}>
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, alignItems:'center' }}>
               <Text style={{ fontSize: 22 }}>Title 1</Text>
             </View>
             <View style={{ flex: 6, padding: 8 }}>
@@ -58,6 +53,18 @@ export default class App extends Component {
             </View>
           </View>
           <View style={{ flex: 1, borderLeftWidth: 3 }}>
+            <View style={{ flex: 1, alignItems:'center' }}>
+              <Text style={{ fontSize: 22 }}>Title 2</Text>
+            </View>
+            <View style={{ flex: 6 }}>
+              <View style={{ flex: 1 }}>
+                <Text></Text>
+              </View>
+              <View style={{ flex: 1, flexDirection: 'row'}}>
+                <Image />
+                <Text></Text>
+              </View>
+            </View>
           </View>
           
         </View>
@@ -87,5 +94,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row', 
     backgroundColor: '#f8ecc2', 
     padding: 8 
+  },
+  secondaryContainer: { 
+    flex: 7, 
+    flexDirection: 'row',
+    backgroundColor: '#f8ecc2',
+    borderBottomWidth: 6, 
+    borderTopWidth: 6 
   },
 });
