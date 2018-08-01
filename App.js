@@ -7,6 +7,8 @@ export default class App extends Component {
 
     const textArtigo1 = 'Aenean eget rhoncus erat, quis dapibus turpis. Maecenas a iaculis diam, ut ultricies urna. Sed quis lacinia sapien. Duis eleifend diam at cursus convallis. Ut nec dignissim neque. Aliquam erat volutpat. Ut eu leo id nunc feugiat porta sit amet in diam. Integer eleifend, turpis et lacinia pulvinar, arcu nisl porta tellus, feugiat faucibus urna nisl eget orci.';
 
+    const textArtigo2 = 'Integer vitae aliquet libero, ut pharetra sem. Donec finibus posuere dolor, sed vulputate felis porttitor eleifend. Donec accumsan venenatis massa eget tincidunt. Aenean dui libero, facilisis nec elit et, facilisis egestas felis.';
+
     return (
       <View style={styles.container}>
         <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -35,19 +37,19 @@ export default class App extends Component {
             <View style={{ flex: 6, padding: 8 }}>
               <View style={{ flex: 1, flexDirection: 'row' }}>
                 <Image 
-                  style={{ flex: 1, width: undefined, height: undefined }} 
+                  style={{ flex: 2, width: undefined, height: undefined }} 
                   source={require('./image/leopard.png')} 
                 />
-                <View style={{ flex: 1, paddingLeft: 8}}>
+                <View style={{ flex: 3, paddingLeft: 8}}>
                   <Text>
-                    {textArtigo1.slice(0, 40)}
+                    {textArtigo1.slice(0, 55)}
                   </Text>
                 </View>
               </View>
               <View style={{ flex: 1 }}>
                 <Text>
-                {textArtigo1.slice(40, 140)}
-                {textArtigo1.length > 140 ? '...' : '' }
+                  {textArtigo1.slice(55, 150)}
+                  {textArtigo1.length > 150 ? '...' : '' }
                 </Text>
               </View>
             </View>
@@ -56,13 +58,21 @@ export default class App extends Component {
             <View style={{ flex: 1, alignItems:'center' }}>
               <Text style={{ fontSize: 22 }}>Title 2</Text>
             </View>
-            <View style={{ flex: 6 }}>
+            <View style={{ flex: 6, padding: 8 }}>
               <View style={{ flex: 1 }}>
-                <Text></Text>
+                <Text>{textArtigo2.slice(0, 120)}</Text>
               </View>
               <View style={{ flex: 1, flexDirection: 'row'}}>
-                <Image />
-                <Text></Text>
+                <Image 
+                  style={{ flex: 2, width: undefined, height: undefined }} 
+                  source={require('./image/sky.png')} 
+                />
+                <View style={{ flex: 3, paddingLeft: 8}}>
+                  <Text>
+                    {textArtigo2.slice(120, 170)}
+                    {textArtigo2.length > 170 ? '...' : '' }
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
