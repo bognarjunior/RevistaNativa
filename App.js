@@ -78,8 +78,8 @@ export default class App extends Component {
           </View>
           
         </View>
-        <View style={{ flex: 1 }}>
-          
+        <View style={styles.footerContainer}>
+          <Text style={{ fontSize: 16}}>Copyright (c) 2018 Revista Nativa</Text>
         </View>
       </View>
     );
@@ -111,5 +111,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8ecc2',
     borderBottomWidth: 6, 
     borderTopWidth: 6 
+  },
+  footerContainer:{ 
+    flex: 1, 
+    backgroundColor:'#d3d3d3', 
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });
