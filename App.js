@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import Header from './components/Header';
 import Main from './components/Main';
 import Secondary from './components/Secondary';
+import Footer from './components/Footer';
 
 export default class App extends Component {
   render() {
@@ -17,9 +18,9 @@ export default class App extends Component {
         <Header />
         <Main texto={mainText} />
         <Secondary textArtigo1={textArtigo1} textArtigo2={textArtigo2} />
-        <View style={styles.footerContainer}>
-          <Text style={{ fontSize: 16}}>Copyright (c) 2018 Revista Nativa</Text>
-        </View>
+        <Footer>
+          Copyright (c) 2018 Revista Nativa
+        </Footer>
       </View>
     );
   }
@@ -30,11 +31,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#c19a6b',
     padding: 13,
-  },
-  footerContainer:{ 
-    flex: 1, 
-    backgroundColor:'#d3d3d3', 
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 });
