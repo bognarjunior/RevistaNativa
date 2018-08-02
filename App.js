@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
-
+import Header from './components/Header';
 export default class App extends Component {
   render() {
     const mainText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies maximus sollicitudin. Integer egestas urna sit amet lorem imperdiet porta. Praesent eget condimentum arcu. Sed at elementum enim, quis facilisis metus.';
@@ -11,15 +11,7 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
-        <View style={{ flex: 1, flexDirection: 'row' }}>
-          <View style={{ flex: 1, backgroundColor: '#832a0d'}} />
-          <View style={{ flex: 1, backgroundColor: '#f4a460'}} />
-          <View style={{ flex: 1, backgroundColor: '#bc8f8f'}} />
-          <View style={{ flex: 1, backgroundColor: '#cd853f'}} />
-        </View>
-        <View style={styles.titleContainer}>
-          <Text style={{ fontSize: 24 }}>Revista Nativa</Text>
-        </View>
+        <Header />
         <View style={styles.mainContainer}>
           <View style={{ flex: 3 }}>
             <Text style={{ fontSize: 14}} numberOfLines={9}>{mainText}</Text>
@@ -91,13 +83,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#c19a6b',
     padding: 13,
-  },
-  titleContainer: { 
-    flex: 1, 
-    backgroundColor: '#f8ecc2', 
-    alignItems:'center', 
-    justifyContent: 'center',
-    borderBottomWidth: 6
   },
   mainContainer: { 
     flex: 6, 
