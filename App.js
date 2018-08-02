@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import Header from './components/Header';
+import Main from './components/Main';
+
 export default class App extends Component {
   render() {
-    const mainText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies maximus sollicitudin. Integer egestas urna sit amet lorem imperdiet porta. Praesent eget condimentum arcu. Sed at elementum enim, quis facilisis metus.';
+    
 
     const textArtigo1 = 'Aenean eget rhoncus erat, quis dapibus turpis. Maecenas a iaculis diam, ut ultricies urna. Sed quis lacinia sapien. Duis eleifend diam at cursus convallis. Ut nec dignissim neque. Aliquam erat volutpat. Ut eu leo id nunc feugiat porta sit amet in diam. Integer eleifend, turpis et lacinia pulvinar, arcu nisl porta tellus, feugiat faucibus urna nisl eget orci.';
 
@@ -12,15 +14,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Header />
-        <View style={styles.mainContainer}>
-          <View style={{ flex: 3 }}>
-            <Text style={{ fontSize: 14}} numberOfLines={9}>{mainText}</Text>
-          </View>
-          <Image 
-            style={{ flex: 2, width: undefined, height: undefined }} 
-            source={require('./image/wood.png')} 
-          />
-        </View>
+        <Main />
         <View style={styles.secondaryContainer}>
           <View style={{ flex: 1, borderRightWidth: 3 }}>
             <View style={{ flex: 1, alignItems:'center' }}>
@@ -83,12 +77,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#c19a6b',
     padding: 13,
-  },
-  mainContainer: { 
-    flex: 6, 
-    flexDirection: 'row', 
-    backgroundColor: '#f8ecc2', 
-    padding: 8 
   },
   secondaryContainer: { 
     flex: 7, 
