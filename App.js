@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import Header from './components/Header';
 import Main from './components/Main';
+import Secondary from './components/Secondary';
 
 export default class App extends Component {
   render() {
-    
+    const mainText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultricies maximus sollicitudin. Integer egestas urna sit amet lorem imperdiet porta. Praesent eget condimentum arcu. Sed at elementum enim, quis facilisis metus.';
 
     const textArtigo1 = 'Aenean eget rhoncus erat, quis dapibus turpis. Maecenas a iaculis diam, ut ultricies urna. Sed quis lacinia sapien. Duis eleifend diam at cursus convallis. Ut nec dignissim neque. Aliquam erat volutpat. Ut eu leo id nunc feugiat porta sit amet in diam. Integer eleifend, turpis et lacinia pulvinar, arcu nisl porta tellus, feugiat faucibus urna nisl eget orci.';
 
@@ -14,56 +15,8 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <Header />
-        <Main />
-        <View style={styles.secondaryContainer}>
-          <View style={{ flex: 1, borderRightWidth: 3 }}>
-            <View style={{ flex: 1, alignItems:'center' }}>
-              <Text style={{ fontSize: 22 }}>Title 1</Text>
-            </View>
-            <View style={{ flex: 6, padding: 8 }}>
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-                <Image 
-                  style={{ flex: 2, width: undefined, height: undefined }} 
-                  source={require('./image/leopard.png')} 
-                />
-                <View style={{ flex: 3, paddingLeft: 8}}>
-                  <Text>
-                    {textArtigo1.slice(0, 55)}
-                  </Text>
-                </View>
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text>
-                  {textArtigo1.slice(55, 150)}
-                  {textArtigo1.length > 150 ? '...' : '' }
-                </Text>
-              </View>
-            </View>
-          </View>
-          <View style={{ flex: 1, borderLeftWidth: 3 }}>
-            <View style={{ flex: 1, alignItems:'center' }}>
-              <Text style={{ fontSize: 22 }}>Title 2</Text>
-            </View>
-            <View style={{ flex: 6, padding: 8 }}>
-              <View style={{ flex: 1 }}>
-                <Text>{textArtigo2.slice(0, 120)}</Text>
-              </View>
-              <View style={{ flex: 1, flexDirection: 'row'}}>
-                <Image 
-                  style={{ flex: 2, width: undefined, height: undefined }} 
-                  source={require('./image/sky.png')} 
-                />
-                <View style={{ flex: 3, paddingLeft: 8}}>
-                  <Text>
-                    {textArtigo2.slice(120, 170)}
-                    {textArtigo2.length > 170 ? '...' : '' }
-                  </Text>
-                </View>
-              </View>
-            </View>
-          </View>
-          
-        </View>
+        <Main texto={mainText} />
+        <Secondary textArtigo1={textArtigo1} textArtigo2={textArtigo2} />
         <View style={styles.footerContainer}>
           <Text style={{ fontSize: 16}}>Copyright (c) 2018 Revista Nativa</Text>
         </View>
@@ -77,13 +30,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#c19a6b',
     padding: 13,
-  },
-  secondaryContainer: { 
-    flex: 7, 
-    flexDirection: 'row',
-    backgroundColor: '#f8ecc2',
-    borderBottomWidth: 6, 
-    borderTopWidth: 6 
   },
   footerContainer:{ 
     flex: 1, 
